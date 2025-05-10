@@ -1,5 +1,6 @@
 :root {
   --button-color: #a7731a;
+
 }
 
 * {
@@ -7,6 +8,12 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
+}
+.container {
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0 30px;
+  box-sizing: border-box;
 }
 .mokup {
   background-image: url("../images/mokup.png");
@@ -212,7 +219,7 @@ nav .icons .cart-noti {
 }
 .hot-selling-slides {
   display: flex;
-  margin: 50px 120px 50px 0px;
+  margin: 50px 50px 50px 0px;
   padding: 10px 15px;
   overflow: hidden;
 }
@@ -522,6 +529,10 @@ nav .icons .cart-noti {
   left: 30px;
   color: #A7731A;
 }
+
+.reservation .reservation-form .form .msg-box{
+  max-width: 1825px;
+}
 .reservation .reservation-form .form textarea{
   border: 1px solid #FFFFFF;
   border-radius: 50px;
@@ -531,10 +542,9 @@ nav .icons .cart-noti {
   margin: 30px 0px;
   font-size: 20px;
   font-weight: 400;
-  flex: 1 1 395px;
   color: rgba(0, 0, 0, .3);
-  resize: none;
 }
+
 .reservation .reservation-form .form .btn{
   cursor: pointer;
   height: 60px;
@@ -548,6 +558,7 @@ nav .icons .cart-noti {
   border-radius: 50px;
   margin: auto;
 }
+
 .reservation .reservation-form .img-ab{
   position: absolute;
   top: 5px;
@@ -577,6 +588,13 @@ footer{
   min-height: 666px;
   flex-wrap: wrap;
   justify-content: space-between;
+}
+footer .container{
+  display: flex;
+  gap: 150px;
+}
+footer .footer1{
+  max-width: 424px;
 }
 footer .footer1 img{
   width: 78px;
@@ -674,6 +692,9 @@ footer .footer1 img{
   padding: 10px 150px;
 }
 
+
+
+ 
 
 
 /* Responsive part */
@@ -848,9 +869,11 @@ footer .footer1 img{
 }
 
 /* Footer */
-
- footer .footer1{
-  width: auto;
+ footer .container{
+  flex-wrap: wrap;
+ }
+ footer .container .footer1{
+  max-width: 100%;
  }
 
 
