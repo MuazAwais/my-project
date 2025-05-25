@@ -496,12 +496,13 @@ nav .icons .cart-noti {
 }
 .reservation .reservation-form .form{
   display: flex;
-  flex-wrap: wrap;
-  gap: 20px 40px;
-  padding: 30px 160px;
+  flex-direction: column;
+  padding: 30px 160px 100px 160px
 }
 .reservation .reservation-form .form .inputs{
   position: relative;
+  display: grid;
+  grid-template-columns: auto auto auto;
 }
 .reservation .reservation-form .form input{
   width: 395px;
@@ -530,19 +531,18 @@ nav .icons .cart-noti {
   color: #A7731A;
 }
 
-.reservation .reservation-form .form .msg-box{
-  max-width: 1825px;
-}
 .reservation .reservation-form .form textarea{
   border: 1px solid #FFFFFF;
   border-radius: 50px;
   box-sizing: border-box;
   height: 115px;
+  max-width: 100%;
   padding: 20px 30px;
-  margin: 30px 0px;
+  margin: 30px 40px 30px 0px;
   font-size: 20px;
   font-weight: 400;
   color: rgba(0, 0, 0, .3);
+  grid-column: 1 / span 3;
 }
 
 .reservation .reservation-form .form .btn{
@@ -556,7 +556,8 @@ nav .icons .cart-noti {
   background-color: #A7731A;
   border: 2px solid #A7731A;
   border-radius: 50px;
-  margin: auto;
+  margin-left: auto;
+  margin-right: 40px;
 }
 
 .reservation .reservation-form .img-ab{
@@ -763,10 +764,18 @@ footer .footer1 img{
   }
   .reservation h2 {
     font-size: 50px;
+
+  }
+  .reservation .reservation-form h3{
+    padding: 45px 0px 0px 30px;
   }
   .reservation .reservation-form{
     margin: 20px;
   }
+  .reservation .reservation-form .form{
+    padding: 30px 30px;
+  }
+
 
 }
 
@@ -867,7 +876,20 @@ footer .footer1 img{
 .reservation .reservation-form .form .btn{
   margin: auto;
 }
-
+.reservation .reservation-form .img-ab{
+ display: none;
+}
+.reservation .reservation-form .img-ab-rot{
+ display: none;
+}
+.reservation .reservation-form .form .inputs{
+  grid-template-columns: auto auto;
+  gap: 0px 20px;
+}
+.reservation .reservation-form .form textarea{
+  grid-column: 1/ span 2;
+  margin: 30px 0px 30px 0px;
+}
 /* Footer */
  footer .container{
   flex-wrap: wrap;
@@ -917,8 +939,10 @@ footer .footer1 img{
     font-size: 16px;
   }
   .reservation .reservation-form {
-    max-width: 760px;
+    max-width: 860px;
   }
+  
+  
   .reservation .reservation-form .form{
     display: flex;
     flex-direction: column;
@@ -936,6 +960,15 @@ footer .footer1 img{
 
 
 
+}
+
+@media screen and (max-width : 1024px) {
+  .reservation .reservation-form .form .inputs{
+    grid-template-columns: auto;
+  }
+  .reservation .reservation-form .form textarea{
+    grid-column: 1/ span 1;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -1061,6 +1094,9 @@ footer .footer1 img{
 }
 
 @media screen and (max-width: 426px) {
+  .container{
+    padding: 0;
+  }
   .mokup nav {
     padding: 28px 20px;
   }
